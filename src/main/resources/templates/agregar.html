@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <link rel="stylesheet" href="css/agregar.css">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        
+        <form th:object = "${evento}"
+              th:action="@{/save}"
+              method="POST"
+              >
+            <div class="form-group-row">
+                <label for="lugar">lugar</label>
+                <input type="text" th:field="*{lugar}" placeholder="Lugar del evento" id="lugar" aria-describedby="emailHelp">
+            </div>
+            
+            <div class="form-group-row">
+                <label for="fecha">fecha</label>
+                <input type="text" th:field="*{fecha}" placeholder= "Fecha del evento" id="fecha" aria-describedby="emailHelp">   
+            </div>
+            <div class="form-group-row">
+                <label for="cap_maxima">cap_maxima</label>
+                <input type="text" th:field="*{cap_maxima}" placeholder= "Capacidad maxima del evento " id="cap_maxima" aria-describedby="emailHelp">   
+            </div>
+
+            <div class="form-group-row">
+                <label for="costo">costo</label>
+                <input type="text" th:field="*{costo}" placeholder= "Costo de evento" id="costo" aria-describedby="emailHelp">   
+            </div>
+            
+            
+            
+            <button type="submit" class="btn btn-primary" value="Guardar">Submmit</button>
+        </form>
+    </body>
+</html>
